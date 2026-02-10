@@ -3,17 +3,15 @@ import Meta from "@/components/meta";
 import Link from "next/link";
 
 const words: string[] = [
-  "Apple", "Galaxy", "Whisper", "Dancer", "Horizon",
-  "Velvet", "Lantern", "Puzzle", "Ocean", "Falcon",
-  "Echo", "Thunder", "Mosaic", "Journey", "Scribe",
-  "Compass", "Shadow", "Ember", "Willow", "Quasar",
-  "Cascade", "Nimbus", "Twilight", "Voyage", "Serendipity",
-  "Mirage", "Tapestry", "Ember", "Labyrinth", "Harmony",
-  "Vortex", "Radiance", "Solstice", "Enigma", "Aurora",
-  "Chroma", "Zenith", "Driftwood", "Ember", "Prism",
-  "Reverie", "Paradox", "Oasis", "Starlight", "Whimsy",
-  "Elysium", "Quantum", "Ethereal", "Soliloquy", "Kaleidoscope",
-  "YoYo"
+  "ant", "baby ground squirrel", "bat", "bear", "bee", "bird", "bird, fly (insect)", 
+  "bluesnake, watersnake", "bobcat, wildcat", "buck", "bullfrog", "butterfly", "buzzard", 
+  "cat", "caterpillar", "chicken", "cow", "deer", "dog", "eagle", "eel, lamprey", "fish", 
+  "flicker", "flying squirrel", "fox", "frog", "goat", "gopher", "gray tree squirrel", 
+  "grizzly bear", "ground squirrel", "hawk", "horse", "hummingbird", "lizard", 
+  "milk snake, king snake", "minnow", "moth", "mountain lion, puma, cougar", "mouse", 
+  "mudhen", "owl", "pig", "porcupine", "quail", "rabbit, bunny", "raccoon", "rattlesnake", 
+  "raven", "salamander", "scorpion", "seagull", "seal", "sheep", "skunk", "small squirrel", 
+  "snake", "turkey", "turtle", "whale", "wolf", "worm"
 ];
 
 export default function Home() {
