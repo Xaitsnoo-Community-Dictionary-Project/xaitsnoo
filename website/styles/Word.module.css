@@ -1,0 +1,94 @@
+/* This page is being used to develop the styles for dictionary entry pages */
+
+/* Entire page styling */
+.entire_page {
+    text-align: center;
+}
+
+/* Styling for the title section */
+.title {
+    background-color: rgb(239, 237, 237);
+    border-radius: 0.625rem;
+}
+.entry_name {
+    font-size: 6.25rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-transform: capitalize;
+}
+.english_name {
+    font-size: 5rem;
+    color: rgb(93, 93, 93);
+    text-align: center;
+    text-transform: capitalize;
+}
+.title h2 {
+    font-size: 2.5rem;
+    color: rgb(93, 93, 93);
+    text-align: center;
+}
+
+/* Styling for the "Listen" section */
+.audio {
+    font-size: 2.5rem;
+}
+.listen {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    align-items: center;
+    padding-bottom: 2.5rem;
+}
+.listen Button {
+    cursor: pointer;
+    border-width: 0;
+    background-color: rgb(239, 237, 237);
+    align-items: center;
+    height: 3.1rem;
+    width: 3.3rem;
+}
+.listen Button:active {
+    background-color: rgb(196, 196, 196);
+}
+
+/* Styles for the "Variants" section */
+.variants {
+    align-items: center;
+    background-color: rgb(239, 237, 237);
+    border-radius: 0.625rem;
+    padding-top: 0.3rem;
+    padding-bottom: 2.5rem;
+    
+}
+.variants h4 {
+    font-size: 1.9rem;
+}
+.variants p {
+    font-size: 1.25rem;
+}
+
+/* Styles for the "Other Info" section */
+.other_info {
+    padding-bottom: 1.12rem;
+}
+.other_info h4{
+    font-size: 1.25rem;
+}
+.other_info p {
+    font-size: 1.1rem;
+}
+
+/* Styles for the final "More" section */
+.more {
+    background-color: rgb(239, 237, 237);
+    border-radius: 0.625rem;
+    padding-top: 0.3rem;
+    padding-bottom: 1.1rem;
+}
+.more h4{
+    font-size: 1.25rem;
+}
+.more Link{
+    font-size: 1.1rem;
+}
