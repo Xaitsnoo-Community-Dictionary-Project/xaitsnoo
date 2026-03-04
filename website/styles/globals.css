@@ -39,8 +39,8 @@
    --wrapper-height: 87vh;
    --image-max-width: 300px;
    --image-margin: 3rem;
-   --font-family: "HK Grotesk";
-   --font-family-header: "HK Grotesk";
+   --font-family: "DM Sans";
+   --font-family-header: "DM Sans";
  }
  
  /* Basic page style resets */
@@ -51,22 +51,9 @@
    display: none !important;
  }
  
- /* Import fonts */
- @font-face {
-   font-family: HK Grotesk;
-   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-     format("opentype");
- }
- @font-face {
-   font-family: HK Grotesk;
-   font-weight: bold;
-   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-     format("opentype");
- }
- 
  /* Our remix on glitch button */
  .btn--remix {
-   font-family: HK Grotesk;
+   font-family: DM Sans;
    padding: 0.75rem 1rem;
    font-size: 1.1rem;
    line-height: 1rem;
@@ -103,7 +90,7 @@
  
  .footer a:not(.btn--remix):link,
  a:not(.btn--remix):visited {
-   font-family: HK Grotesk;
+   font-family: DM Sans;
    font-style: normal;
    font-weight: normal;
    font-size: 1.1rem;
@@ -128,7 +115,7 @@
  ******************************************************************************/
  
  body {
-   font-family: HK Grotesk;
+   font-family: DM Sans;
    background-color: var(--color-bg);
    margin: 24px 16px;
  }
