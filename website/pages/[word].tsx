@@ -3,12 +3,21 @@ import Meta from "@/components/meta";
 import { Button } from "@ariakit/react";
 import styles from "@/styles/Word.module.css";
 import Link from "next/link";
+import {useState, useEffect} from "react";
 
 export default function Word() {
-  const audio = new Audio("https://linguistics.berkeley.edu/~sepomo/WordAudio/5oct06_LK9_663.mp3");
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  
+  useEffect(() => {
+    setAudio(new Audio("https://linguistics.berkeley.edu/~sepomo/WordAudio/5oct06_LK9_663.mp3"));
+  }, []);
+
   const start = () => {
-    audio.play()
+    if (audio) {
+      audio.play()
+    }
   }
+
   const router = useRouter();
   const { word } = router.query;
   return (

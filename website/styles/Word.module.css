@@ -9,6 +9,7 @@
 .title {
     background-color: rgb(239, 237, 237);
     border-radius: 0.625rem;
+    padding-bottom: 0.4rem;
 }
 .entry_name {
     font-size: 6.25rem;
