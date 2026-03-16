@@ -100,38 +100,13 @@
     padding: 0.5rem 1rem;
     transition: 500ms;
  }
- 
- input {
-   width: 100%;
- }
- 
- .infobox {
-   width: 100%;
-   padding: 8px;
-   margin-top: 16px;
-   border-radius: 4px;
-   border: 1px solid black;
- }
- 
+
  .error {
    background: rgba(255, 0, 0, 0.3);
  }
  
- #result {
-   display: block;
-   color: white!important;
-   text-decoration: none;
-   background: rgba(0, 0, 0, 0.3);
- }
- 
  #characters_error {
    display: none;
- }
- 
- .suggestion {
-   background: rgba(166, 51, 214, 0.8);
-   color: white;
-   cursor: pointer;
  }
  
  main {
