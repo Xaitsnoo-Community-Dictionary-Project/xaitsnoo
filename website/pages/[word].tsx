@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Meta from "@/components/meta";
-import { Button } from "@ariakit/react";
+import { button } from "@ariakit/react";
 import styles from "@/styles/Word.module.css";
 import Link from "next/link";
 import {useState, useEffect} from "react";
@@ -31,7 +31,7 @@ export default function Word() {
       <div className={styles.audio}>
         <h4>Listen</h4>
         <div className={styles.listen}>
-          <Button onClick={start}> 🔈</Button>
+          <button onClick={start}> 🔈</button>
           <audio
             src="https://linguistics.berkeley.edu/~sepomo/WordAudio/15apr07_LK1_549.mp3"
             controls={false}

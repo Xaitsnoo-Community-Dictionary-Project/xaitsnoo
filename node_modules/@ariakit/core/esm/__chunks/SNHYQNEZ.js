@@ -1,0 +1,30 @@
+"use client";
+import {
+  canUseDOM
+} from "./3DNM6L6E.js";
+
+// src/utils/platform.ts
+function isTouchDevice() {
+  return canUseDOM && !!navigator.maxTouchPoints;
+}
+function isApple() {
+  if (!canUseDOM) return false;
+  return /mac|iphone|ipad|ipod/i.test(navigator.platform);
+}
+function isSafari() {
+  return canUseDOM && isApple() && /apple/i.test(navigator.vendor);
+}
+function isFirefox() {
+  return canUseDOM && /firefox\//i.test(navigator.userAgent);
+}
+function isMac() {
+  return canUseDOM && navigator.platform.startsWith("Mac") && !isTouchDevice();
+}
+
+export {
+  isTouchDevice,
+  isApple,
+  isSafari,
+  isFirefox,
+  isMac
+};
