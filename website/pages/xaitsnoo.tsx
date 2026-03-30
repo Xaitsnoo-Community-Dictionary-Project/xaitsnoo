@@ -1,4 +1,4 @@
-import styles from "@/styles/Xaitsnoo.module.css"
+import styles from "@/styles/Speakers.module.css"
 import Meta from "@/components/meta"
 
 export default function Xaitsnoo() {
