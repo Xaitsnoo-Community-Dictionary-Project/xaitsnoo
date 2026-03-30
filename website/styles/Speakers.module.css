@@ -1,0 +1,39 @@
+.entire_page {
+    text-align: center;
+}
+.entire_page hr {
+    width: 65rem;
+    align-items: center;
+}
+.title h1 {
+    font-size: 4rem;
+}
+.title p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60rem;
+}
+.speaker_title {
+    font-size: 1.5rem;
+}
+.speaker_bio_photo {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+} 
+.speaker_bio_photo p {
+    font-size: 1.1rem;
+    margin: auto;
+    width: 20rem;
+}
+.speaker_bio_text p {
+    width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}  

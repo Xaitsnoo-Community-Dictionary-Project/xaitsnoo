@@ -1,13 +1,16 @@
-import { useRouter } from 'next/router';
-import Meta from "@/components/meta";
+import styles from "@/styles/Speakers.module.css"
+import Meta from "@/components/meta"
 
-export default function Word() {
-  const router = useRouter();
-  const { word } = router.query;
-  return (
-    <>
-      <Meta title={"About Xaitsnoo"} />
-      Here we can write about Xaitsnoo.
-    </>
-  );
+export default function Xaitsnoo() {
+    return (
+        <div className = {styles.entire_page}>
+          <div className="title">
+            <Meta title="About" />
+            <h1>About the Xaitsnoo language</h1>
+          </div>
+          <div className="info">
+            <p>blurb blurb</p>
+          </div>
+        </div>
+    );
 }
