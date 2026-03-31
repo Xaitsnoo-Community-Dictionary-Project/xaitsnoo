@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <div>
-            <Link href="/">Search</Link>
+            <Link href="/browse">Browse</Link>
           </div>
           <div>
             <Link href="/how-to-use">How to Use</Link>
