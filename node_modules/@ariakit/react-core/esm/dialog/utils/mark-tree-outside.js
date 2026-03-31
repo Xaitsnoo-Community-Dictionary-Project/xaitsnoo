@@ -1,0 +1,16 @@
+"use client";
+import {
+  isElementMarked,
+  markAncestor,
+  markElement,
+  markTreeOutside
+} from "../../__chunks/3NDVDEB4.js";
+import "../../__chunks/AOUGVQZ3.js";
+import "../../__chunks/K2ZF5NU7.js";
+import "../../__chunks/63XF7ACK.js";
+export {
+  isElementMarked,
+  markAncestor,
+  markElement,
+  markTreeOutside
+};

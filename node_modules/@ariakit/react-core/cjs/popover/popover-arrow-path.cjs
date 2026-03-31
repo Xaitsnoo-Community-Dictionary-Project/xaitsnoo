@@ -1,0 +1,6 @@
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});
+
+var _PLY2V46Gcjs = require('../__chunks/PLY2V46G.cjs');
+
+
+exports.POPOVER_ARROW_PATH = _PLY2V46Gcjs.POPOVER_ARROW_PATH;
