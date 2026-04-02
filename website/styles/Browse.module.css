@@ -9,7 +9,7 @@
     cursor: default;
 }
 .title {
-    font-size: 4rem;
+    font-size: 3rem;
     cursor: pointer;
 }
 .title:hover {
@@ -26,14 +26,14 @@
 }
 .browse_subtitle {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: default;
 }
 .result_list {
     text-align: center;
 }
 .result {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin: 10px;  
 }
 .result p {
