@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Link href="/speakers">Speakers</Link>
           </div>
           <div>
-            <Link href="/about">About the Dictionary</Link>
+            <Link href="/team">About the Dictionary</Link>
           </div>
         </div>
       </div>

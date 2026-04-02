@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Meta from "@/components/meta";
-import { button } from "@ariakit/react";
+
 import styles from "@/styles/Word.module.css";
 import Link from "next/link";
 import {useState, useEffect} from "react";
