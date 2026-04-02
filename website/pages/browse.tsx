@@ -26,12 +26,11 @@ export default function browse() {
         ['food', ['chicken']]
     ])
 
-    function searchWords() {
+    function searchWords(): string[] {
         if (category=="Meaning Type") {
-            return meaningTypes.get(type);
-        } else {
-            return grammarTypes.get(type);
+            return meaningTypes.get(type) ?? [];
         } 
+        return grammarTypes.get(type) ?? [];
     }
     function handleCategoryChange(category: string) {
         setCategory(category);
@@ -49,33 +48,33 @@ export default function browse() {
    
     function browseContent() {
         if (stage == 1) {
-            return <h1>Brose by 
-                <span onClick={() => handleCategoryChange("Meaning Type")}> Meaning Type</span> or 
-                <span onClick={() => handleCategoryChange("Grammar Type")}> Grammar Category</span></h1>
+            return <h2 className={styles.browse_subtitle}>Brose by{"  "}
+                <span className={styles.navegate_link} onClick={() => handleCategoryChange("Meaning Type")}>Meaning Type</span> or{"  "}
+                <span className={styles.navegate_link} onClick={() => handleCategoryChange("Grammar Type")}>Grammar Category</span></h2>
         } else if (stage == 2) {
             return (
-                <div>
-                    <h1>Select a {category}</h1>
+                <div className={styles.result_list}>
+                    <h2 className={styles.browse_subtitle}>Select a {category}</h2>
                     {category=="Meaning Type" ? 
                         [...meaningTypes.keys()].map(type => (
-                            <div>
-                                <p onClick={() => handleTypeChange(type)}>{type}</p>
+                            <div key={type} className={styles.result}>
+                                <p className={styles.navegate_link} onClick={() => handleTypeChange(type)}>{type}</p>
                             </div>
                         ))
                     :   [...grammarTypes.keys()].map(type => (
-                            <div>
-                                <p onClick={() => handleTypeChange(type)}>{type}</p>
+                            <div key={type} className={styles.result}>
+                                <p className={styles.navegate_link} onClick={() => handleTypeChange(type)}>{type}</p>
                             </div>
                         ))}
                 </div>
             )
         } else if (stage == 3) {
             return (
-                <div>
-                    <h1>Select a Word</h1>
+                <div className={styles.result_list}>
+                    <h2 className={styles.browse_subtitle}>Select a Word</h2>
                     {searchWords().map(word => (
-                        <div>
-                            <Link id="result" href={`/${word}`}>{word}</Link>
+                        <div key={word} className={styles.result}>
+                            <Link className={styles.navegate_link} id="result" href={`/${word}`}>{word}</Link>
                         </div>
                     ))
                     }
@@ -86,11 +85,11 @@ export default function browse() {
      
     return (
         <>
-            <div>
+            <div className={styles.header}>
                 <Meta title="browse" />
-                <h1>Browse Dictionary Entries</h1>
-                <Button onClick={() => handleReset()}>Reset</Button>
+                <h1 className={styles.title} onClick={() => handleReset()}>Browse Dictionary Entries</h1>
             </div>
+            <hr className={styles.divider}></hr>
             {browseContent()}
         </>
     );

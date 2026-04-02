@@ -1,3 +1,49 @@
 .entire_page {
     text-align: center;
 }
+.header {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+.title {
+    font-size: 4rem;
+    cursor: pointer;
+}
+.title:hover {
+    color:#6f2604; 
+}
+.divider {
+    width: 65rem;
+}
+.reset {
+    height: 3rem;
+    border: none;
+    background-color: rgb(51, 78, 150);
+    color: white;
+}
+.browse_subtitle {
+    text-align: center;
+    font-size: 3rem;
+    cursor: default;
+}
+.result_list {
+    text-align: center;
+}
+.result {
+    font-size: 1.5rem;
+    margin: 10px;  
+}
+.result p {
+    margin: 0;
+}
+.navegate_link {
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.navegate_link:hover {
+    color:#D14200;
+}
