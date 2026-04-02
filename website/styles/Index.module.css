@@ -12,15 +12,9 @@
     font-size: 1.1rem;
 }
 
-.form_elements {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
 .input {
     position: relative;
-    width: 67%;
+    width: 78%;
 }
 
 .text_box {
@@ -43,13 +37,6 @@
     border: none;
     background-color:rgba(0, 0, 0, 0);
     cursor: pointer;
-}
-
-.search_btn {
-    height: 3rem;
-    border: none;
-    background-color: rgb(51, 78, 150);
-    color: white;
 }
 
 .suggestion {

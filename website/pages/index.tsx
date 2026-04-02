@@ -1,5 +1,4 @@
 import { useState, FormEvent, ChangeEvent } from "react";
-import { button } from "@ariakit/react";
 import Meta from "@/components/meta";
 import Link from "next/link";
 import styles from "@/styles/Index.module.css"
@@ -77,15 +76,10 @@ export default function Home() {
         if (!a.includes && b.includes) return 1;
         return a.distance - b.distance;
       })
-      .slice(0, 5)
+      .slice(0, 10)
       .map(item => item.word);
 
     setSuggestions(ranked);
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    submit();
   };
 
   const handleReset = () => {
@@ -101,18 +95,15 @@ export default function Home() {
       <h1 className={styles.title}>Xaitsnoo Community Dictionary</h1>
       <div className={styles.body}>
         <p>Look up a word (English to Xaitsnoo)</p>
-        <form id="form" onSubmit={handleSubmit} onReset={handleReset} className={styles.form}>
-          <div className={styles.form_elements}>
-            <div className={styles.input}>
-              <input className={styles.text_box}
-                id="input"
-                placeholder="Search..."
-                value={inputValue}
-                onChange={autocomplete}
-              />
-              <button type="reset" className={styles.reset_btn}>x</button>
-            </div>
-            <button type="submit" className={styles.search_btn}>Search</button>
+        <form id="form" onReset={handleReset} className={styles.form}>
+          <div className={styles.input}>
+            <input className={styles.text_box}
+              id="input"
+              placeholder="Search..."
+              value={inputValue}
+              onChange={autocomplete}
+            />
+            <button type="reset" className={styles.reset_btn}>x</button>
           </div>
         </form>
         {error && (
@@ -127,7 +118,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p>Or try browsing words by <Link className={styles.navegate_link} href="">meaning category</Link> or <Link className={styles.navegate_link} href="">grammar type.</Link></p>
+        <p>Or try browsing words by <Link className={styles.navegate_link} href="/browse">meaning category or grammar type</Link></p>
       </div>
     </>
   );
