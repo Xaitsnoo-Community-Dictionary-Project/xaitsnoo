@@ -100,14 +100,6 @@
     padding: 0.5rem 1rem;
     transition: 500ms;
  }
-
- .error {
-   background: rgba(255, 0, 0, 0.3);
- }
- 
- #characters_error {
-   display: none;
- }
  
  main {
    background: white;

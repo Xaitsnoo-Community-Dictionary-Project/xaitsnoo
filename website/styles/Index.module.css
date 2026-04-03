@@ -51,7 +51,12 @@
 .navegate_link {
     color: rgb(70, 70, 70);
 }
+
 .navegate_link:hover {
     color:#D14200;
 }
-/* TODO: Error formatting */
+
+.error {
+    color:#ff0000;
+    font-size: 1.5rem;
+}

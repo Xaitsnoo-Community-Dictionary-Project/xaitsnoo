@@ -20,20 +20,6 @@ export default function Home() {
   const [error, setError] = useState<boolean>(false);
   const [result, setResult] = useState<string>(""); //result is deprecated but may be used soon!
 
-  const submit = (selected?: string) => { //submit is deprecated but may be used soon!
-    const value = selected || inputValue.trim();
-    if (/[^a-zA-Z]/.test(value)) {
-      setError(true);
-      setSuggestions([]);
-      setResult("");
-    } else {
-      setError(false);
-      setResult(value);
-      setSuggestions([]);
-    }
-    setInputValue("");
-  };
-
   function levenshtein(a: string, b: string): number {
     const matrix = Array.from({ length: a.length + 1 }, (_, i) => [i]);
     for (let j = 1; j <= b.length; j++) {
@@ -57,8 +43,18 @@ export default function Home() {
 
   const autocomplete = (e: ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value.toLowerCase();
+    
+    if (/[^a-zA-Z]/.test(input)) {
+      setError(true);
+      setSuggestions([]);
+      setInputValue(input)
+      return;
+    } else {
+      setError(false);
+      setSuggestions([]);
+    }
+
     setInputValue(input);
-    setResult("");
 
     if (!input) {
       setSuggestions([]);
@@ -107,13 +103,13 @@ export default function Home() {
           </div>
         </form>
         {error && (
-          <div id="characters_error" className="infobox error">
-            Unexpected characters! At the moment, only the Latin alphabet is supported.
+          <div className={styles.error}>
+            <h5>Unexpected characters! At the moment, only English characters are supported.</h5>
           </div>
         )}
         <div id="suggestions">
           {suggestions.map(word => (
-            <div className={styles.suggestion}>
+            <div key={word} className={styles.suggestion}>
               <Link className={styles.navegate_link} id="result" href={`/${word}`}>{word}</Link>
             </div>
           ))}
