@@ -1,13 +1,18 @@
+/* This page styles speakers.tsx, team.tsx, how-to-use.tsx, and xaitsnoo.tsx */
+
 .entire_page {
     text-align: center;
 }
+
 .entire_page hr {
     width: 65rem;
     align-items: center;
 }
+
 .title h1 {
     font-size: 3rem;
 }
+
 .title p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
@@ -15,9 +20,12 @@
     margin-right: auto;
     width: 60rem;
 }
+
+/* speakers.tsx-specific styling */
 .speaker_title {
     font-size: 1.5rem;
 }
+
 .speaker_bio_photo {
     padding-left: 15rem;
     padding-right: 15rem;
@@ -25,11 +33,13 @@
     justify-content: space-between;
     margin-bottom: 2rem;
 } 
+
 .speaker_bio_photo p {
     font-size: 1.1rem;
     margin: auto;
     width: 20rem;
 }
+
 .speaker_bio_text p {
     width: 50rem;
     margin-left: auto;

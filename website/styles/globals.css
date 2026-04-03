@@ -87,7 +87,8 @@
    font-family: DM Sans;
    background-color: var(--color-bg);
    margin: 0;
- }
+   overflow-x: hidden;
+  }
  
  button,
  input {
@@ -115,7 +116,7 @@
    font-size: 18px;
    background:#D14200;
    padding: 2rem;
-   width:100%;
+   width: 100vw;
  }
  
  .nav > div:first-child {
