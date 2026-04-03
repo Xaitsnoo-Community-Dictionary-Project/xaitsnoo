@@ -1,14 +1,14 @@
-import styles from "@/styles/Xaitsnoo.module.css"
+import styles from "@/styles/InfoAbout.module.css"
 import Meta from "@/components/meta"
 
 export default function Xaitsnoo() {
     return (
         <div className = {styles.entire_page}>
-          <div className="title">
+          <div className={styles.title}>
             <Meta title="About" />
             <h1>About the Xaitsnoo language</h1>
           </div>
-          <div className="info">
+          <div>
             <p>blurb blurb</p>
           </div>
         </div>

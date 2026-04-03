@@ -1,4 +1,4 @@
-import styles from "@/styles/Speakers.module.css"
+import styles from "@/styles/InfoAbout.module.css"
 import Meta from "@/components/meta"
 
 function SpeakerInfo( {name, bio, image_src}: {name: string, bio: string, image_src?: string} ) {
