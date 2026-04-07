@@ -1,13 +1,15 @@
-import { Button } from "@ariakit/react";
 import Link from "next/link";
-import { useState } from "react";
 import styles from "@/styles/Browse.module.css"
 import Meta from "@/components/meta"
-
+import { useParams } from "next/navigation";
 export default function browse() {
-    const [category, setCategory] = useState<string>(""); // Whether meaning type or grammar type is selected
-    const [type, setType] = useState<string>(""); // The specific grammar type or meaning category that is selected
-    const [stage, setStage]= useState<number>(1); // Which section of the browsing page is currently being used
+    const searchParams = useParams();
+    const slug = (searchParams?.slug as string[]) || [];
+
+    // category refers to either "Grammar Type" or "Meaning Category"
+    // subCategory refers to the specific subcategories of "Grammar Type" or "Meaning Category"
+    const [category, subCategory] = slug;
+    const stage = slug.length + 1;
 
     // The data will need to be processed in order to get it to the state shown below.  
     const grammarTypes = new Map([
@@ -27,43 +29,30 @@ export default function browse() {
     ])
 
     function searchWords(): string[] {
-        if (category=="Meaning Type") {
-            return meaningTypes.get(type) ?? [];
-        } 
-        return grammarTypes.get(type) ?? [];
-    }
-    function handleCategoryChange(category: string) {
-        setCategory(category);
-        setStage(2);
-    }
-    function handleTypeChange(type: string) {
-        setType(type);
-        setStage(3);
-    }
-    function handleReset() {
-        setStage(1);
-        setType("");
-        setCategory("");
+        if (category=="meaning-type") {
+            return meaningTypes.get(subCategory) ?? [];
+        }
+        return grammarTypes.get(subCategory) ?? [];
     }
    
     function browseContent() {
         if (stage == 1) {
             return <h2 className={styles.browse_subtitle}>Brose by{"  "}
-                <span className={styles.navegate_link} onClick={() => handleCategoryChange("Meaning Type")}>Meaning Type</span> or{"  "}
-                <span className={styles.navegate_link} onClick={() => handleCategoryChange("Grammar Type")}>Grammar Category</span></h2>
+                <Link className={styles.navegate_link} href={`/browse/meaning-type`}>Meaning Type</Link> or{"  "}
+                <Link className={styles.navegate_link} href={`/browse/grammar-type`}>Grammar Category</Link></h2>
         } else if (stage == 2) {
             return (
                 <div className={styles.result_list}>
-                    <h2 className={styles.browse_subtitle}>Select a {category}</h2>
-                    {category=="Meaning Type" ? 
-                        [...meaningTypes.keys()].map(type => (
-                            <div key={type} className={styles.result}>
-                                <p className={styles.navegate_link} onClick={() => handleTypeChange(type)}>{type}</p>
+                    <h2 className={styles.browse_subtitle}>Select a {category=="meaning-type" ? "Meaning Type" : "Grammar Category"}</h2>
+                    {category=="meaning-type" ? 
+                        [...meaningTypes.keys()].map(relatedCategory => (
+                            <div key={relatedCategory} className={styles.result}>
+                                <Link className={styles.navegate_link} href={`/browse/meaning-type/${relatedCategory}`}>{relatedCategory}</Link>
                             </div>
                         ))
-                    :   [...grammarTypes.keys()].map(type => (
-                            <div key={type} className={styles.result}>
-                                <p className={styles.navegate_link} onClick={() => handleTypeChange(type)}>{type}</p>
+                    :   [...grammarTypes.keys()].map(relatedCategory => (
+                            <div key={relatedCategory} className={styles.result}>
+                                <Link className={styles.navegate_link} href={`/browse/grammar-type/${relatedCategory}`}>{relatedCategory}</Link>
                             </div>
                         ))}
                 </div>
@@ -87,7 +76,7 @@ export default function browse() {
         <>
             <div className={styles.header}>
                 <Meta title="browse" />
-                <h1 className={styles.title} onClick={() => handleReset()}>Browse Dictionary Entries</h1>
+                <Link className={styles.title} href="/browse">Browse Dictionary Entries</Link>
             </div>
             <hr className={styles.divider}></hr>
             {browseContent()}

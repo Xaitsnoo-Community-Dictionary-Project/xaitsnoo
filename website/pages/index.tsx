@@ -114,7 +114,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p>Or try browsing words by <Link className={styles.navegate_link} href="/browse">meaning category or grammar type</Link></p>
+        <p>Or try browsing words by <Link className={styles.navegate_link} href="/browse/meaning-type">meaning category</Link> or <Link className={styles.navegate_link} href="/browse/grammar-type">grammar type</Link></p>
       </div>
     </>
   );

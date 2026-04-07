@@ -11,6 +11,10 @@
 .title {
     font-size: 3rem;
     cursor: pointer;
+    color: rgb(70, 70, 70);
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 1rem;
 }
 .title:hover {
     color:#6f2604; 
