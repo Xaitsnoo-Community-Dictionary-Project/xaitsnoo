@@ -60,7 +60,7 @@ export default function browse() {
         } else if (stage == 3) {
             return (
                 <div className={styles.result_list}>
-                    <h2 className={styles.browse_subtitle}>Select a Word</h2>
+                    <h2 className={styles.browse_subtitle}>Select a {subCategory.charAt(0).toUpperCase() + subCategory.slice(1)}</h2>
                     {searchWords().map(word => (
                         <div key={word} className={styles.result}>
                             <Link className={styles.navegate_link} id="result" href={`/${word}`}>{word}</Link>
