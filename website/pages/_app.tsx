@@ -2,12 +2,22 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Link from "next/link";
 import { useState } from "react";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+
+// Tutorials for Apollo Client:
+// https://www.apollographql.com/blog/next-js-getting-started
+// https://www.apollographql.com/tutorials/lift-off-part1/09-defining-a-query 
+const client = new ApolloClient({
+  uri: "http://localhost:4000", // Replace w/ location of server!
+  cache: new InMemoryCache(),
+});
+
 
 export default function App({ Component, pageProps }: AppProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
+    <ApolloProvider client={client}>
       <div className="nav">
         <div className="logo">
           <Link href="/">
@@ -60,6 +70,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <Link href="https://github.com/Xaitsnue-Community-Dictionary-Project/xaitsnue">Open source</Link>, a project housed in the{" "} <Link href="https://lx.berkeley.edu/"> UC Berkeley Department of Linguistics</Link>.
         </p>
       </div>
-    </>
+    </ApolloProvider>
   );
 }
