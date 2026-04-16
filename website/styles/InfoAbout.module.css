@@ -47,3 +47,21 @@
     font-size: 1.1rem;
     margin-bottom: 2rem;
 }  
+
+/* team.tsx-specific styling */
+.team_header p {
+    width: 50rem;
+    margin: auto;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.team_info {
+    text-align: left;
+    margin: auto;
+    margin-top: 2rem;
+    width: 50rem;
+    font-size: 1.1rem;
+}
+.team_bold {
+    font-weight: bold;
+}
