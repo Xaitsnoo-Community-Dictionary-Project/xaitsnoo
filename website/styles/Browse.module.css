@@ -10,6 +10,7 @@
     justify-content: center;
     cursor: default;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .title {
@@ -26,7 +27,7 @@
 }
 
 .divider {
-    width: 65rem;
+    width: 72%;
 }
 
 .reset {
