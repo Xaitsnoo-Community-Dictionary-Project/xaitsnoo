@@ -19,35 +19,37 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <div className="nav">
-        <div className="logo">
-          <Link href="/">
-            Xaitsnoo Community Dictionary Project
-          </Link>
-        </div>
+        <div className="bar-container">
+          <div className="logo">
+            <Link href="/" onClick={() => setMenuOpen(!menuOpen)}>
+              Xaitsnoo Community Dictionary Project
+            </Link>
+          </div>
 
-        <button
-          className="menu-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
-        >
-          ☰
-        </button>
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            ☰
+          </button>
+        </div>
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <div>
-            <Link href="/browse">Browse</Link>
+            <Link href="/browse" onClick={() => setMenuOpen(!menuOpen)}>Browse</Link>
           </div>
           <div>
-            <Link href="/how-to-use">How to Use</Link>
+            <Link href="/how-to-use" onClick={() => setMenuOpen(!menuOpen)}>How to Use</Link>
           </div>
           <div>
-            <Link href="/xaitsnoo">About Xaitsnoo</Link>
+            <Link href="/xaitsnoo" onClick={() => setMenuOpen(!menuOpen)}>About Xaitsnoo</Link>
           </div>
           <div>
-            <Link href="/speakers">Speakers</Link>
+            <Link href="/speakers" onClick={() => setMenuOpen(!menuOpen)}>Speakers</Link>
           </div>
           <div>
-            <Link href="/team">About the Dictionary</Link>
+            <Link href="/team" onClick={() => setMenuOpen(!menuOpen)}>About the Dictionary</Link>
           </div>
         </div>
       </div>

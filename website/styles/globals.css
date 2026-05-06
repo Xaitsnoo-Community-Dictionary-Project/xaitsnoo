@@ -144,9 +144,12 @@
 
  @media (max-width: 768px) { /*mobile header*/
   .nav {
-    flex-wrap: wrap;
+    flex-direction: column;
     padding: 1rem;
     font-size: 18px;
+  }
+  .bar-container {
+    display: flex;
   }
 
   .nav > div:first-child {
@@ -162,15 +165,30 @@
     cursor: pointer;
   }
   .nav-links {
+    text-align: right;
     width: 100%;
     display: none; /* hidden by default */
     flex-direction: column;
     gap: 12px;
+    padding: 1rem;
     margin-top: 1rem;
+    font-size: 18px;
+  }
+
+  .nav-link{
+    color: white;
+    text-decoration: none;
   }
 
   .nav-links.open {
-    display: flex;
+    display: flex; /* show menu when open */
+    color: white;
+    text-decoration: none;
+  } 
+  
+  /* Additional margin edit for mobile devices */
+  main {
+    margin: 7px 7px;
   }
 }
 
