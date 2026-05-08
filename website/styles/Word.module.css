@@ -16,12 +16,15 @@
     color: rgb(0, 0, 0);
     text-align: center;
     text-transform: capitalize;
+    margin: 0;
 }
 .english_name {
     font-size: 5rem;
     color: rgb(93, 93, 93);
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 .title h2 {
     font-size: 2.5rem;
@@ -92,4 +95,42 @@
 }
 .more Link{
     font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .entry_name {
+        padding-top: 1rem;
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .english_name {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .title h2 {
+        font-size: 1.3rem;
+    }
+
+    .audio {
+        font-size: 1.5rem;
+    }
+
+    .audio p {
+        font-size: 1.2rem;
+    }
+
+    .listen {
+        font-size: 1.5rem;
+    }
+
+    .variants h4 {
+        font-size: 1.5rem;
+    }
+
+    .variants p {
+        font-size: 1.1rem;
+    }
 }

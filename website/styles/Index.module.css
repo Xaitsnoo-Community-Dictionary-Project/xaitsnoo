@@ -64,9 +64,16 @@
 
 /* Mobile Device Edit */
 @media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
     .body {
         padding-left: 0;
         margin: auto;
+    }
+    .body p {
+        font-size: 1rem;
     }
 
     .input {

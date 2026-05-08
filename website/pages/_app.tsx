@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <div className="nav">
         <div className="bar-container">
           <div className="logo">
-            <Link href="/" onClick={() => setMenuOpen(!menuOpen)}>
+            <Link href="/" onClick={() => setMenuOpen(false)}>
               Xaitsnoo Community Dictionary Project
             </Link>
           </div>

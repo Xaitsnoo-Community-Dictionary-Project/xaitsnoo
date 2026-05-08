@@ -66,3 +66,12 @@
 .navegate_link:hover {
     color:#D14200;
 }
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .browse_subtitle {
+        font-size: 1.5rem;
+    }
+}
