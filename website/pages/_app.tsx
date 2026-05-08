@@ -7,6 +7,8 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 // Tutorials for Apollo Client:
 // https://www.apollographql.com/blog/next-js-getting-started
 // https://www.apollographql.com/tutorials/lift-off-part1/09-defining-a-query 
+
+// Note--this section below may not be needed (depending on backend implementation)
 const client = new ApolloClient({
   uri: "http://localhost:4000", // Replace w/ location of server!
   cache: new InMemoryCache(),

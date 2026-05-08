@@ -62,7 +62,7 @@
     font-size: 1.5rem;
 }
 
-/* Mobile Device Edit */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;

@@ -123,6 +123,7 @@ a.secondary {
   }
 }
 
+/* Mobile Adjustments */
 @media (max-width: 600px) {
   .page {
     padding: 32px;

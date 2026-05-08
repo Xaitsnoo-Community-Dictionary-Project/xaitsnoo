@@ -67,10 +67,12 @@
     color:#D14200;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;
     }
+
     .browse_subtitle {
         font-size: 1.5rem;
     }

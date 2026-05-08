@@ -11,6 +11,7 @@
     border-radius: 0.625rem;
     padding-bottom: 0.4rem;
 }
+
 .entry_name {
     font-size: 6.25rem;
     color: rgb(0, 0, 0);
@@ -18,6 +19,7 @@
     text-transform: capitalize;
     margin: 0;
 }
+
 .english_name {
     font-size: 5rem;
     color: rgb(93, 93, 93);
@@ -26,6 +28,7 @@
     margin-bottom: 3rem;
     margin-top: 2rem;
 }
+
 .title h2 {
     font-size: 2.5rem;
     color: rgb(93, 93, 93);
@@ -36,6 +39,7 @@
 .audio {
     font-size: 2.5rem;
 }
+
 .listen {
     font-size: 1.5rem;
     display: flex;
@@ -44,6 +48,7 @@
     align-items: center;
     padding-bottom: 2.5rem;
 }
+
 .listen Button {
     cursor: pointer;
     border-width: 0;
@@ -52,6 +57,7 @@
     height: 3.1rem;
     width: 3.3rem;
 }
+
 .listen Button:active {
     background-color: rgb(196, 196, 196);
 }
@@ -65,9 +71,11 @@
     padding-bottom: 2.5rem;
     
 }
+
 .variants h4 {
     font-size: 1.9rem;
 }
+
 .variants p {
     font-size: 1.25rem;
 }
@@ -76,9 +84,11 @@
 .other_info {
     padding-bottom: 1.12rem;
 }
+
 .other_info h4{
     font-size: 1.25rem;
 }
+
 .other_info p {
     font-size: 1.1rem;
 }
@@ -90,13 +100,16 @@
     padding-top: 0.3rem;
     padding-bottom: 1.1rem;
 }
+
 .more h4{
     font-size: 1.25rem;
 }
+
 .more Link{
     font-size: 1.1rem;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
     .entry_name {
         padding-top: 1rem;

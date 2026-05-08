@@ -142,7 +142,9 @@
  .menu-toggle {
   display: none; /* hidden on desktop */}
 
- @media (max-width: 768px) { /*mobile header*/
+  /* Mobile Adjustments */
+ @media (max-width: 768px) { 
+  /*mobile header*/
   .nav {
     flex-direction: column;
     padding: 1rem;
